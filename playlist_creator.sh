@@ -4,7 +4,7 @@
 # Use with dirs containing video, audio or image files only
 
 BASEDIR=$1
-if [ "$BASEDIR" == "" ]; then
+if [ -z "$BASEDIR" ]; then
       echo You must specify a base directory
       exit 1
 fi
