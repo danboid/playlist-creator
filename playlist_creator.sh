@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # m3u playlist generator shell script
 # Generates playlists for use with media players such as mpv
 # Use with dirs containing video, audio or image files only
