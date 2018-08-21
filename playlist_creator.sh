@@ -9,13 +9,14 @@ if [ "$BASEDIR" == "" ]; then
       exit 1
 fi
 
-cd $BASEDIR
-BASEDIR=`pwd`
+cd "$BASEDIR" || exit 1
+BASEDIR=$(pwd)
 
 # Remove existing playlists
 find . -name '*.m3u'|sed -e "s/^/\"/"|sed -e "s/$/\"/"|xargs rm -f
 
 find . -type d |sort| while read -r DIR; do
-      cd "$BASEDIR/$DIR"
+      cd "$BASEDIR/$DIR" || exit 1
       find . -type f | grep -v m3u | sort> '00-Playlist.m3u'
 done
+
