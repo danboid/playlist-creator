@@ -12,6 +12,7 @@ I copy the script into my $PATH as **pc** like so:
 
 ```
  $ sudo cp playlist_creator.sh /usr/local/bin/pc
+ $ sudo chmod +x /usr/local/bin/pc
 ```
 
 Then when I want to generate a playlist, I **cd** into the top level
